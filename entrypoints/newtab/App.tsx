@@ -1,9 +1,6 @@
 import { Layout } from '../../components/Layout';
 
-/**
- * ChronoTab root — final assembly.
- * All feature widgets mount through Layout; keep this shell thin.
- */
+/** ChronoTab root. Feature widgets mount through Layout. */
 export default function App() {
   return <Layout />;
 }

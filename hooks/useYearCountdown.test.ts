@@ -18,7 +18,7 @@ function localDate(
 }
 
 describe('computeYearCountdown', () => {
-  it('returns the shape Prompt 3 will bind to', () => {
+  it('returns the countdown fields the Orbit Ring binds to', () => {
     const state = computeYearCountdown(localDate(2025, 6, 4, 12, 30, 45));
     expect(state).toEqual(
       expect.objectContaining({

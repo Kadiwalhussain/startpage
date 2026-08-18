@@ -1,7 +1,7 @@
 import { QUOTES, type Quote } from '../data/quotes';
 
 /**
- * Hour-bucket strategy (documented for Prompt 4):
+ * Hour-bucket strategy:
  *
  * We use **local wall-clock hours**, not UTC epoch hours:
  *   bucket = localDayNumber * 24 + localHour

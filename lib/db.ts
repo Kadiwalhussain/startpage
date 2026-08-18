@@ -2,7 +2,7 @@ import Dexie, { type EntityTable } from 'dexie';
 
 /**
  * ChronoTab local persistence (IndexedDB via Dexie).
- * Single database for tasks (Prompt 5) and notes (Prompt 6).
+ * Single database for tasks and notes.
  */
 
 export interface Task {
@@ -31,12 +31,12 @@ export class ChronoTabDB extends Dexie {
   constructor() {
     super('chronotab-db');
 
-    // Prompt 5 baseline — keep declared so upgrades migrate cleanly.
+    // v1 baseline — keep declared so upgrades migrate cleanly.
     this.version(1).stores({
       tasks: '++id, completed, order, createdAt',
     });
 
-    // Prompt 6: add notes without touching the tasks store definition
+    // v2: add notes without changing the tasks store definition
     // (repeating tasks with the same schema preserves existing rows).
     this.version(2).stores({
       tasks: '++id, completed, order, createdAt',

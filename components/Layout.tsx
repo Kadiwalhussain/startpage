@@ -4,7 +4,7 @@ import { QuoteCard } from './QuoteCard';
 import { TaskWidget } from './TaskWidget';
 
 /**
- * Final ChronoTab chrome (Prompt 7).
+ * ChronoTab page chrome.
  *
  * Desktop (≥1024px): Orbit Ring dominates the upper ~65–70vh with generous
  * air around it. Below, QuoteCard takes a wider column (read-only, needs line

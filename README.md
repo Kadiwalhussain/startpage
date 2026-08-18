@@ -148,7 +148,7 @@ Temporary add-ons in Firefox unload when the browser quits — reload after each
 - **Desktop (≥1024px):** Quote (7 cols) | Tasks + Notes stacked (5 cols)
 - **Tablet / mobile:** Quote → Tasks → Notes, full width
 
-Widgets mount through `Layout` via `data-mount="quote-card" | "task-widget" | "notes-widget"`.
+Widgets mount through `Layout`.
 
 ---
 
@@ -207,8 +207,6 @@ assets/fonts/          # JetBrains Mono + Fraunces
 public/icon/           # 16 / 32 / 48 / 96 / 128
 ```
 
-Isolation harnesses (`*Harness.tsx`) exist for widget-only checks; they are not mounted in `Layout`.
-
 ---
 
 ## Data & persistence
@@ -254,24 +252,6 @@ pnpm compile   # TypeScript
 pnpm lint      # ESLint
 pnpm build     # full MV3 bundle
 ```
-
----
-
-## Prompt history
-
-The extension was assembled in seven prompts. Each write-up is kept in the repo:
-
-| Prompt | Doc            | What landed                                      |
-| ------ | -------------- | ------------------------------------------------ |
-| 1      | this README    | WXT + React + Tailwind scaffold, new-tab shell   |
-| 2      | [PROMPT2.md](PROMPT2.md) | Year countdown engine + Vitest             |
-| 3      | [PROMPT3.md](PROMPT3.md) | Orbit Ring hero, Layout mount points       |
-| 4      | [PROMPT4.md](PROMPT4.md) | Hourly quote engine + QuoteCard            |
-| 5      | [PROMPT5.md](PROMPT5.md) | Dexie tasks + TaskWidget                   |
-| 6      | [PROMPT6.md](PROMPT6.md) | Notes table + NotesWidget                  |
-| 7      | [PROMPT7.md](PROMPT7.md) | Final layout, polish, store-ready manifest |
-
-The live entrypoints (`App.tsx`, `style.css`, `index.html`, `wxt.config.ts`) are the Prompt 7 assembly.
 
 ---
 
