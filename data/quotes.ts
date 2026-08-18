@@ -1,0 +1,530 @@
+/**
+ * Curated offline quote set for ChronoTab.
+ * Fully local — never fetched over the network.
+ *
+ * Sources are well-attested public remarks/writings. Prefer shorter lines
+ * that fit a compact plaque-style card (~under 30 words).
+ */
+
+export interface Quote {
+  id: string;
+  text: string;
+  author: string;
+  /** Optional short context, e.g. "Investor, Berkshire Hathaway" */
+  role?: string;
+}
+
+export const QUOTES: Quote[] = [
+  {
+    id: 'buffett-others-fear',
+    text: 'Be fearful when others are greedy and greedy when others are fearful.',
+    author: 'Warren Buffett',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'buffett-reputation',
+    text: 'It takes 20 years to build a reputation and five minutes to ruin it.',
+    author: 'Warren Buffett',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'buffett-price-value',
+    text: 'Price is what you pay. Value is what you get.',
+    author: 'Warren Buffett',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'buffett-circle',
+    text: 'Never invest in a business you cannot understand.',
+    author: 'Warren Buffett',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'munger-wait',
+    text: 'The big money is not in the buying and selling, but in the waiting.',
+    author: 'Charlie Munger',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'munger-invert',
+    text: 'Invert, always invert: turn a situation or problem upside down.',
+    author: 'Charlie Munger',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'munger-know',
+    text: 'Acknowledging what you don’t know is the dawning of wisdom.',
+    author: 'Charlie Munger',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'munger-sit',
+    text: 'The first rule of compounding: never interrupt it unnecessarily.',
+    author: 'Charlie Munger',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'dalio-pain',
+    text: 'Pain + reflection = progress.',
+    author: 'Ray Dalio',
+    role: 'Investor, Bridgewater Associates',
+  },
+  {
+    id: 'dalio-truth',
+    text: 'An accurate understanding of reality is the essential foundation for any good outcome.',
+    author: 'Ray Dalio',
+    role: 'Investor, Bridgewater Associates',
+  },
+  {
+    id: 'dalio-open',
+    text: 'If you’re not failing, you’re not pushing your limits.',
+    author: 'Ray Dalio',
+    role: 'Investor, Bridgewater Associates',
+  },
+  {
+    id: 'naval-play',
+    text: 'Play long-term games with long-term people.',
+    author: 'Naval Ravikant',
+    role: 'Entrepreneur & investor',
+  },
+  {
+    id: 'naval-specific',
+    text: 'Specific knowledge is knowledge that you cannot be trained for.',
+    author: 'Naval Ravikant',
+    role: 'Entrepreneur & investor',
+  },
+  {
+    id: 'naval-leverage',
+    text: 'Embrace accountability and take business risks under your own name.',
+    author: 'Naval Ravikant',
+    role: 'Entrepreneur & investor',
+  },
+  {
+    id: 'naval-happiness',
+    text: 'A fit body, a calm mind, a house full of love. These things cannot be bought — they must be earned.',
+    author: 'Naval Ravikant',
+    role: 'Entrepreneur & investor',
+  },
+  {
+    id: 'bezos-regret',
+    text: 'I knew that if I failed I wouldn’t regret that, but I knew the one thing I might regret is not trying.',
+    author: 'Jeff Bezos',
+    role: 'Founder, Amazon',
+  },
+  {
+    id: 'bezos-day1',
+    text: 'It’s always Day 1.',
+    author: 'Jeff Bezos',
+    role: 'Founder, Amazon',
+  },
+  {
+    id: 'bezos-customers',
+    text: 'We see our customers as invited guests to a party, and we are the hosts.',
+    author: 'Jeff Bezos',
+    role: 'Founder, Amazon',
+  },
+  {
+    id: 'bezos-focus',
+    text: 'Focusing on the customer makes a lot of other business debates irrelevant.',
+    author: 'Jeff Bezos',
+    role: 'Founder, Amazon',
+  },
+  {
+    id: 'musk-physics',
+    text: 'The first step is to establish that something is possible; then probability will occur.',
+    author: 'Elon Musk',
+    role: 'Entrepreneur, SpaceX & Tesla',
+  },
+  {
+    id: 'musk-failure',
+    text: 'Failure is an option here. If things are not failing, you are not innovating enough.',
+    author: 'Elon Musk',
+    role: 'Entrepreneur, SpaceX & Tesla',
+  },
+  {
+    id: 'musk-work',
+    text: 'I think it is possible for ordinary people to choose to be extraordinary.',
+    author: 'Elon Musk',
+    role: 'Entrepreneur, SpaceX & Tesla',
+  },
+  {
+    id: 'thiel-competition',
+    text: 'Competition is for losers.',
+    author: 'Peter Thiel',
+    role: 'Entrepreneur & investor',
+  },
+  {
+    id: 'thiel-future',
+    text: 'We wanted flying cars, instead we got 140 characters.',
+    author: 'Peter Thiel',
+    role: 'Entrepreneur & investor',
+  },
+  {
+    id: 'thiel-secret',
+    text: 'Every moment in business happens only once.',
+    author: 'Peter Thiel',
+    role: 'Entrepreneur & investor',
+  },
+  {
+    id: 'altman-compound',
+    text: 'Compound growth is extraordinarily powerful — and almost no one takes full advantage of it.',
+    author: 'Sam Altman',
+    role: 'CEO, OpenAI',
+  },
+  {
+    id: 'altman-hard',
+    text: 'It is easier to do a hard startup than an easy startup.',
+    author: 'Sam Altman',
+    role: 'CEO, OpenAI',
+  },
+  {
+    id: 'altman-focus',
+    text: 'You can usually hire your way out of a problem, but you can’t hire your way into a vision.',
+    author: 'Sam Altman',
+    role: 'CEO, OpenAI',
+  },
+  {
+    id: 'jobs-dots',
+    text: 'You can’t connect the dots looking forward; you can only connect them looking backward.',
+    author: 'Steve Jobs',
+    role: 'Co-founder, Apple',
+  },
+  {
+    id: 'jobs-heart',
+    text: 'The only way to do great work is to love what you do.',
+    author: 'Steve Jobs',
+    role: 'Co-founder, Apple',
+  },
+  {
+    id: 'jobs-simple',
+    text: 'Simple can be harder than complex.',
+    author: 'Steve Jobs',
+    role: 'Co-founder, Apple',
+  },
+  {
+    id: 'jobs-time',
+    text: 'Your time is limited, so don’t waste it living someone else’s life.',
+    author: 'Steve Jobs',
+    role: 'Co-founder, Apple',
+  },
+  {
+    id: 'hoffman-blitz',
+    text: 'If you are not embarrassed by the first version of your product, you’ve launched too late.',
+    author: 'Reid Hoffman',
+    role: 'Co-founder, LinkedIn',
+  },
+  {
+    id: 'hoffman-network',
+    text: 'Your network is the people who want to help you, and you want to help them, and that’s really powerful.',
+    author: 'Reid Hoffman',
+    role: 'Co-founder, LinkedIn',
+  },
+  {
+    id: 'graham-startup',
+    text: 'Startup = growth.',
+    author: 'Paul Graham',
+    role: 'Co-founder, Y Combinator',
+  },
+  {
+    id: 'graham-do',
+    text: 'The way to get startup ideas is to look for problems, not to try to think of ideas.',
+    author: 'Paul Graham',
+    role: 'Co-founder, Y Combinator',
+  },
+  {
+    id: 'graham-relentless',
+    text: 'Relentlessly resourceful.',
+    author: 'Paul Graham',
+    role: 'Co-founder, Y Combinator',
+  },
+  {
+    id: 'drucker-measure',
+    text: 'What gets measured gets managed.',
+    author: 'Peter Drucker',
+    role: 'Management thinker',
+  },
+  {
+    id: 'drucker-efficiency',
+    text: 'Efficiency is doing things right; effectiveness is doing the right things.',
+    author: 'Peter Drucker',
+    role: 'Management thinker',
+  },
+  {
+    id: 'collins-good',
+    text: 'Good is the enemy of great.',
+    author: 'Jim Collins',
+    role: 'Author, Good to Great',
+  },
+  {
+    id: 'collins-who',
+    text: 'First who, then what.',
+    author: 'Jim Collins',
+    role: 'Author, Good to Great',
+  },
+  {
+    id: 'sinek-why',
+    text: 'People don’t buy what you do; they buy why you do it.',
+    author: 'Simon Sinek',
+    role: 'Author & speaker',
+  },
+  {
+    id: 'clear-systems',
+    text: 'You do not rise to the level of your goals. You fall to the level of your systems.',
+    author: 'James Clear',
+    role: 'Author, Atomic Habits',
+  },
+  {
+    id: 'clear-1percent',
+    text: 'Habits are the compound interest of self-improvement.',
+    author: 'James Clear',
+    role: 'Author, Atomic Habits',
+  },
+  {
+    id: 'holiday-obstacle',
+    text: 'The obstacle in the path becomes the path.',
+    author: 'Ryan Holiday',
+    role: 'Author, The Obstacle Is the Way',
+  },
+  {
+    id: 'holiday-ego',
+    text: 'Ego is the enemy of what you want and of what you have.',
+    author: 'Ryan Holiday',
+    role: 'Author, Ego Is the Enemy',
+  },
+  {
+    id: 'frankl-choice',
+    text: 'Between stimulus and response there is a space — in that space is our power to choose.',
+    author: 'Viktor E. Frankl',
+    role: 'Psychiatrist & author',
+  },
+  {
+    id: 'seneca-time',
+    text: 'It is not that we have a short time to live, but that we waste a lot of it.',
+    author: 'Seneca',
+    role: 'Stoic philosopher',
+  },
+  {
+    id: 'aurelius-control',
+    text: 'You have power over your mind — not outside events. Realize this, and you will find strength.',
+    author: 'Marcus Aurelius',
+    role: 'Stoic philosopher',
+  },
+  {
+    id: 'aurelius-obstacle',
+    text: 'The impediment to action advances action. What stands in the way becomes the way.',
+    author: 'Marcus Aurelius',
+    role: 'Stoic philosopher',
+  },
+  {
+    id: 'grove-paranoia',
+    text: 'Only the paranoid survive.',
+    author: 'Andy Grove',
+    role: 'Former CEO, Intel',
+  },
+  {
+    id: 'grove-output',
+    text: 'A manager’s output is the output of the organization under his supervision or influence.',
+    author: 'Andy Grove',
+    role: 'Former CEO, Intel',
+  },
+  {
+    id: 'horowitz-hard',
+    text: 'The hard thing is not setting a big goal — it’s laying people off when you miss it.',
+    author: 'Ben Horowitz',
+    role: 'Investor, Andreessen Horowitz',
+  },
+  {
+    id: 'a16z-software',
+    text: 'Software is eating the world.',
+    author: 'Marc Andreessen',
+    role: 'Investor, Andreessen Horowitz',
+  },
+  {
+    id: 'blank-customers',
+    text: 'There are no facts inside the building, so get outside.',
+    author: 'Steve Blank',
+    role: 'Entrepreneur & educator',
+  },
+  {
+    id: 'ries-learn',
+    text: 'The only way to win is to learn faster than anyone else.',
+    author: 'Eric Ries',
+    role: 'Author, The Lean Startup',
+  },
+  {
+    id: 'godin-remarkable',
+    text: 'Average is for losers. Remarkable is the new black.',
+    author: 'Seth Godin',
+    role: 'Author & entrepreneur',
+  },
+  {
+    id: 'godin-ship',
+    text: 'Ship often. Ship lousy stuff, but ship. Ship constantly.',
+    author: 'Seth Godin',
+    role: 'Author & entrepreneur',
+  },
+  {
+    id: 'ferriss-fear',
+    text: 'What we fear doing most is usually what we most need to do.',
+    author: 'Tim Ferriss',
+    role: 'Author & investor',
+  },
+  {
+    id: 'ferriss-busy',
+    text: 'Being busy is a form of laziness — lazy thinking and indiscriminate action.',
+    author: 'Tim Ferriss',
+    role: 'Author & investor',
+  },
+  {
+    id: 'dwell-focus',
+    text: 'Focus is a matter of deciding what things you’re not going to do.',
+    author: 'John Carmack',
+    role: 'Engineer & entrepreneur',
+  },
+  {
+    id: 'pg-make',
+    text: 'Make something people want.',
+    author: 'Paul Graham',
+    role: 'Co-founder, Y Combinator',
+  },
+  {
+    id: 'fdr-fear',
+    text: 'The only thing we have to fear is fear itself.',
+    author: 'Franklin D. Roosevelt',
+    role: 'Statesman',
+  },
+  {
+    id: 'roosevelt-arena',
+    text: 'The credit belongs to the man who is actually in the arena.',
+    author: 'Theodore Roosevelt',
+    role: 'Statesman',
+  },
+  {
+    id: 'churchill-going',
+    text: 'If you’re going through hell, keep going.',
+    author: 'Winston Churchill',
+    role: 'Statesman',
+  },
+  {
+    id: 'disney-dream',
+    text: 'The way to get started is to quit talking and begin doing.',
+    author: 'Walt Disney',
+    role: 'Entrepreneur, The Walt Disney Company',
+  },
+  {
+    id: 'ford-believe',
+    text: 'Whether you think you can, or you think you can’t — you’re right.',
+    author: 'Henry Ford',
+    role: 'Founder, Ford Motor Company',
+  },
+  {
+    id: 'edison-fail',
+    text: 'I have not failed. I’ve just found 10,000 ways that won’t work.',
+    author: 'Thomas Edison',
+    role: 'Inventor & entrepreneur',
+  },
+  {
+    id: 'keller-alone',
+    text: 'Alone we can do so little; together we can do so much.',
+    author: 'Helen Keller',
+    role: 'Author & advocate',
+  },
+  {
+    id: 'angelou-remember',
+    text: 'People will never forget how you made them feel.',
+    author: 'Maya Angelou',
+    role: 'Author & poet',
+  },
+  {
+    id: 'covey-important',
+    text: 'Don’t prioritize your schedule — schedule your priorities.',
+    author: 'Stephen R. Covey',
+    role: 'Author, The 7 Habits',
+  },
+  {
+    id: 'dwell-deep',
+    text: 'Depth over width always wins over long periods of time.',
+    author: 'Cal Newport',
+    role: 'Author, Deep Work',
+  },
+  {
+    id: 'newport-clarity',
+    text: 'Clarity about what matters provides clarity about what does not.',
+    author: 'Cal Newport',
+    role: 'Author, Deep Work',
+  },
+  {
+    id: 'brown-vulnerability',
+    text: 'Vulnerability is having the courage to show up when you can’t control the outcome.',
+    author: 'Brené Brown',
+    role: 'Researcher & author',
+  },
+  {
+    id: 'duckworth-grit',
+    text: 'Grit is living life like it’s a marathon, not a sprint.',
+    author: 'Angela Duckworth',
+    role: 'Psychologist & author',
+  },
+  {
+    id: 'dweck-yet',
+    text: 'Becoming is better than being.',
+    author: 'Carol S. Dweck',
+    role: 'Psychologist, Mindset',
+  },
+  {
+    id: 'godin-tribe',
+    text: 'Find the smallest viable audience and make something they care about.',
+    author: 'Seth Godin',
+    role: 'Author & entrepreneur',
+  },
+  {
+    id: 'collison-speed',
+    text: 'Optimize for rate of learning.',
+    author: 'Patrick Collison',
+    role: 'CEO, Stripe',
+  },
+  {
+    id: 'chesky-story',
+    text: 'Build something 100 people love, not something 1 million people kind of like.',
+    author: 'Brian Chesky',
+    role: 'CEO, Airbnb',
+  },
+  {
+    id: 'fried-calm',
+    text: 'It’s the work that matters, not the hours.',
+    author: 'Jason Fried',
+    role: 'Co-founder, 37signals',
+  },
+  {
+    id: 'hansson-enough',
+    text: 'Enough is a beautiful place to be.',
+    author: 'DHH',
+    role: 'Co-founder, 37signals',
+  },
+  {
+    id: 'buffett-fish',
+    text: 'Someone’s sitting in the shade today because someone planted a tree a long time ago.',
+    author: 'Warren Buffett',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'munger-patient',
+    text: 'The desire to get rich fast is pretty dangerous.',
+    author: 'Charlie Munger',
+    role: 'Investor, Berkshire Hathaway',
+  },
+  {
+    id: 'naval-judgment',
+    text: 'Earn with your mind, not your time.',
+    author: 'Naval Ravikant',
+    role: 'Entrepreneur & investor',
+  },
+  {
+    id: 'jobs-stay',
+    text: 'Stay hungry. Stay foolish.',
+    author: 'Steve Jobs',
+    role: 'Co-founder, Apple',
+  },
+];
+
+export const QUOTE_COUNT = QUOTES.length;

@@ -1,0 +1,114 @@
+/* Self-hosted fonts — bundled with the extension (CSP-safe, no live CDN). */
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../assets/fonts/JetBrainsMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../../assets/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../../assets/fonts/Fraunces-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../../assets/fonts/Fraunces-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../../assets/fonts/Fraunces-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+  }
+
+  /* Match page bg immediately to avoid white FOUC before CSS settles */
+  html {
+    background-color: #0b0e1a;
+  }
+
+  body {
+    @apply bg-deep font-body text-parchment antialiased;
+  }
+
+  .font-display {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Theme-aligned focus rings for keyboard users */
+  :focus-visible {
+    outline: 2px solid #c9a227;
+    outline-offset: 2px;
+  }
+
+  /* Themed scrollbars (tasks list, notes history) */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(201, 162, 39, 0.35) rgba(18, 22, 42, 0.8);
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(18, 22, 42, 0.85);
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(201, 162, 39, 0.35);
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: rgba(201, 162, 39, 0.55);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+    }
+  }
+}
